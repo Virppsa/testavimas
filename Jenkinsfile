@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/Virppsa/testavimas.git'
+                git branch: 'main', url: 'https://github.com/Virppsa/testavimas.git'
+                sh 'chmod +x mvnw'
                 sh './mvnw clean compile'
             }
         }
@@ -17,7 +18,7 @@ pipeline {
 
             post {
                 always {
-                    junit '**/target/sunfire-reports/TEST-*.xml'
+                    junit '**/target/surefire-reports/TEST-*.xml'
                 }
             }
         }

@@ -26,8 +26,12 @@ public class Testas4 {
     @BeforeClass
     public static void beforeClassCreateUser() {
         System.out.println("Before all");
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 
         driver = new ChromeDriver(options);
         //driver = new ChromeDriver();
