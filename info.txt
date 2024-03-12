@@ -1,0 +1,7 @@
+Kad paleisti jenkinsa per dockeri:
+docker compose up -d
+
+Kad paruninti testus lokaliai terminale:
+bash mvnw test
+
+
