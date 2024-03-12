@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Build') {
+            steps {
+                git 'https://github.com/Virppsa/testavimas.git'
+                sh './mvnw clean compile'
+            }
+        }
         stage('Test') {
             steps {
                 script {
