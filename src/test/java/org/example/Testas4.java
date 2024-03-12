@@ -26,7 +26,7 @@ public class Testas4 {
     @BeforeClass
     public static void beforeClassCreateUser() {
         System.out.println("Before all");
-        System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/plugins/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/plugins/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--disable-gpu");
