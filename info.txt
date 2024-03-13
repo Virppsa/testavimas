@@ -5,3 +5,8 @@ Kad paruninti testus lokaliai terminale:
 bash mvnw test
 
 
+Kai pakeiciame kazka:
+
+1. git add .
+2. git commit -m "Commit - name"
+3. git push origin main
